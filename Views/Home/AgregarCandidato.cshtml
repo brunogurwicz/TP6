@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Agregar Candidato";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+    <form method="post" action='@Url.Action("GuardarCandidato")'>
+        <div class="row">
+        <input type="hidden" name="IdPartido" value="@ViewBag.IdPartido">
+        <input type="text" name="Nombre" value="Nombre">
+        <input type="text" name="Apellido" value="Apellido">
+        <input type="text" name="Foto" value="Foto">
+        <input type="date" name="FechaNacimiento" value="FechaNacimiento">
+        <input type="text" name="Postulación" value="Postulación">
+        <input type="submit" name="Guardar" value="Guardar">
+        </div>
+    </form>
+</body>
+</html>

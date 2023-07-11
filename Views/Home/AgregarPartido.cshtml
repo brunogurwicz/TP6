@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Agregar Partido";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+    <form method="post" action='@Url.Action("GuardarPartido")'>
+        <div class="row">
+        <input type="text" name="Nombre" value="Nombre">
+        <input type="text" name="Logo" value="Logo">
+        <input type="text" name="SitioWeb" value="SitioWeb">
+        <input type="date" name="FechaFundacion" value="FechaFundacion">
+        <input type="text" name="CantidadDiputados" value="CantidadDiputados">
+        <input type="text" name="CantidadSenadores" value="CantidadSenadores">
+        <input type="submit" name="Guardar" value="Guardar">
+        </div>
+    </form>
+</body>
+</html>

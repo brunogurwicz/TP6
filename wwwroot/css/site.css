@@ -1,0 +1,75 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@font-face {
+  font-family: "Encode";
+  src: url(../fonts/EncodeSans.ttf);
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.divTarjeta{
+  display: inline-block;
+  margin: 10px;
+  width: 400px;
+}
+.divBoton{
+  display: block;
+  align-content: center;
+  background-color: #0077cc;
+}
+.aBoton{
+  display: block;
+  margin: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+h4{
+  color: #258cfb;
+}
+.pfp{
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+}
+h1,h2,h3,h4,h5,p{
+  font-family: "Encode";
+}
+.Creditos div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+.img-creditos{
+  width: 30rem;
+}
+.wrapped{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end ;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.eliminar{
+  justify-content: flex-start;
+}

@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    @foreach (Partido par in ViewBag.ListaPartidos)
+    {
+        <div class="divTarjeta">
+        <a href='@Url.Action("VerDetallePartido", new {IdPartido = par.IdPartido})' class="boton"><img src="/imgs/@par.Logo" alt="img" width="300px"></a>
+        <h3>@par.Nombre</h3>
+        <a href='@Url.Action("EliminarPartido", new {IdPartido = par.IdPartido})' class="eliminar"><img src="/imgs/eliminar.png" alt="" width="20px"></a>
+        </div>
+    }
+    <a href='@Url.Action("AgregarPartido")' class="boton"><img src="/imgs/add.png" alt="img" class="pfp"></a>
+</body>
+</html>

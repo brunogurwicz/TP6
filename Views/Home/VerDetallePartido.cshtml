@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = @ViewBag.Partido.Nombre;
+}
+<h1>@ViewData["Title"]</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <img src="/imgs/@ViewBag.Partido.Logo" alt="img" width="200px">
+    <h3>Se fundó en @ViewBag.Partido.FechaFundacion.ToShortDateString()</h3>
+    <h3>El partido tiene @ViewBag.Partido.CantidadSenadores senadores</h3>
+    <h3>El partido tiene @ViewBag.Partido.CantidadDiputados disputados</h3>
+    <h4>Sitio Web: @ViewBag.Partido.SitioWeb</h4>
+    <div class="wrapped">
+    @foreach (Candidato can in ViewBag.ListaCandidatos)
+        {
+            <div class="divTarjeta">
+                <h3>@can.Postulación</h3>
+                <a href='@Url.Action("VerDetalleCandidato", new {IdCandidato = can.IdCandidato})' class="boton"><img src="/imgs/@can.Foto" alt="img" class="pfp"></a>
+                <a href='@Url.Action("EliminarCandidato", new {IdCandidato = can.IdCandidato, IdPartido=can.IdPartido})' class="eliminar"><img src="/imgs/eliminar.png" alt="" width="20px"></a>
+            </div>
+        }
+     <a href='@Url.Action("AgregarCandidato", new {IdPartido = @ViewBag.Partido.IdPartido})' class="boton"><img src="/imgs/add.png" alt="img" class="pfp"></a>
+     </div>
+</body>
+</html>
